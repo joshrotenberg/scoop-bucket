@@ -1,0 +1,27 @@
+{
+  "version": "0.10.0",
+  "description": "tinfoil_demo CLI",
+  "homepage": "https://github.com/joshrotenberg/tinfoil_demo",
+  "license": "MIT",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/joshrotenberg/tinfoil_demo/releases/download/v0.10.0/tinfoil_demo-0.10.0-x86_64-pc-windows-msvc.zip",
+      "hash": "0fc09f1344d97dec50587af09fd047e6cf414b1d37ebea67cfac279d37546518"
+    }
+  },
+  "bin": "tinfoil_demo.exe",
+  "checkver": {
+    "github": "https://github.com/joshrotenberg/tinfoil_demo"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/joshrotenberg/tinfoil_demo/releases/download/v$version/tinfoil_demo-$version-x86_64-pc-windows-msvc.zip",
+        "hash": {
+          "url": "$baseurl/checksums-sha256.txt",
+          "regex": "([A-Fa-f0-9]{64})\\s+tinfoil_demo-$version-x86_64-pc-windows-msvc\\.zip"
+        }
+      }
+    }
+  }
+}
